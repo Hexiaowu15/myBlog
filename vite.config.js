@@ -11,6 +11,8 @@ export default defineConfig({
       imports:['vue','vue-router']
     })
   ],
+  // github actions 构建
+  base:"/github-actions-deploy-dynamic/",
   resolve:{
     alias:{
       '@':path.resolve(__dirname,'./src')
