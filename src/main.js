@@ -2,6 +2,9 @@ import { createApp } from 'vue'
 import App from './App.vue'
 
 import './styles/style.css'
+// import '@/assets/icons/iconfont.js'
+// import 'https://at.alicdn.com/t/c/font_3512139_jk93pt4zwj9.js'
+// import '@/assets/icons/iconfont.css'
 
 import router from './router'
 

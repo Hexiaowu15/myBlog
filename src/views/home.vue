@@ -1,6 +1,7 @@
 <template>
 <div class="box" style="">
-  <router-link to="/title">gotitle</router-link>
+  好的了
+  <!-- <router-link to="/title">gotitle</router-link> -->
 </div>
 </template>
 
@@ -11,7 +12,7 @@
 .box {
   width: 100vw;
   height: 100vh;
-  background: url('/src/assets/images/bg/bg.png') no-repeat center/100%;
+  background-color: rgb(247,249,254);
   h1 {
     color: $color;
   }
