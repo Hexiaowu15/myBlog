@@ -12,7 +12,7 @@ export default defineConfig({
     })
   ],
   // github actions 构建
-  base:"/github-actions-deploy-dynamic/",
+  base:"/myBlog/",
   resolve:{
     alias:{
       '@':path.resolve(__dirname,'./src')
