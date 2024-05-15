@@ -33,7 +33,7 @@ import myHeader from '@/layout/components/myHeader.vue'
 import myNav from './components/myNav.vue'
 import myAside from './components/myAside.vue'
 import myFooter from './components/myFooter.vue'
-import home from "./components/home.vue"
+import home from "@/views/home.vue"
 </script>
 
 <style lang="scss" scoped>
