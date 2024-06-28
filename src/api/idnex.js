@@ -8,3 +8,11 @@ export function getText(params){
     params
   })
 }
+
+export function getCity(params){
+  return request({
+    method:'get',
+    url:'/gitCity',
+    params
+  })
+}

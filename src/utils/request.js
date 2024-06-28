@@ -1,7 +1,7 @@
 import axios from "axios"
 
 const request = axios.create({
-  baseURL: '/api', // url = base url + request url
+  baseURL: '/uni', // url = base url + request url
   // withCredentials: true, // send cookies when cross-domain requests
   timeout: 5000 // request timeout
 })

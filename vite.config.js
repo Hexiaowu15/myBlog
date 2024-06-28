@@ -34,6 +34,11 @@ export default defineConfig({
             target:'https://env-00jxgns8zhk9-static.normal.cloudstatic.cn/',
             changeOrigin: true,
             rewrite: (path) => path.replace(/^\/api/, ''),
+          },
+          '/uni':{
+            target:'https://env-00jxgns8zhk9.dev-hz.cloudbasefunction.cn/',
+            changeOrigin: true,
+            rewrite: (path) => path.replace(/^\/uni/, ''),
           }
     },
     port:8090

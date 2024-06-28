@@ -26,7 +26,7 @@
             <bIcon icon-name="qq" size="18"></bIcon>
           </el-button>
           <el-button class="button_hover" color="rgba(255,255,255,.1)" circle>
-            <bIcon icon-name="weixin" size="18"></bIcon>
+            <bIcon icon-name="wx" size="18" ></bIcon>
           </el-button>
         </div>
       </div>
@@ -52,13 +52,12 @@
 </template>
 
 <script setup>
-import bIcon from "@/components/blogIcon/index.vue"
 
 </script>
 
 <style lang="scss" scoped>
 .card {
-  margin: 20px 0;
+  margin: 0 0 20px;
   border-radius: 15px;
   border: none;
 

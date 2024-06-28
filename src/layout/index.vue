@@ -12,7 +12,7 @@
         </el-aside>
         <el-container>
           <el-main>
-            <home></home>
+            <myMain></myMain>
           </el-main>
           <el-footer>
             <!-- footer -->
@@ -29,11 +29,11 @@
 </template>
 
 <script setup>
-import myHeader from '@/layout/components/myHeader.vue'
+import myHeader from './components/myHeader.vue'
 import myNav from './components/myNav.vue'
 import myAside from './components/myAside.vue'
 import myFooter from './components/myFooter.vue'
-import home from "@/views/home.vue"
+import myMain from './components/myMain.vue'
 </script>
 
 <style lang="scss" scoped>

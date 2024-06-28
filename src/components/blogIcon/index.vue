@@ -9,7 +9,7 @@
 </template>
 
 <script setup>
-import "https://at.alicdn.com/t/c/font_3512139_tweqxfgkznf.js"
+import "https://at.alicdn.com/t/c/font_3512139_fp420dohcgm.js"
 const props = defineProps({
   iconName: {
     type: String,

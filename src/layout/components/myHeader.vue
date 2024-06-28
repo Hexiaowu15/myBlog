@@ -37,7 +37,7 @@ function querySearch(params, cb) {
   display: flex;
   justify-content: space-between;
   align-items: center;
-
+  margin-bottom: 20px;
   .logo {
     width: 200px;
     height: 72px;

@@ -6,7 +6,7 @@ import './styles/style.css'
 // import 'https://at.alicdn.com/t/c/font_3512139_jk93pt4zwj9.js'
 // import '@/assets/icons/iconfont.css'
 
-import router from './router'
+import router from './routers'
 
 import {createPinia} from 'pinia'
 const pinia = createPinia()
@@ -20,6 +20,10 @@ const app = createApp(App)
 for(const [key,compoent] of Object.entries(ElementPlusIconsVue)){
   app.component(key,compoent)
 }
+
+import blogIcon from '@/components/blogIcon/index.vue'
+
+app.component('bIcon',blogIcon)
 
 app.use(router).use(pinia).use(ElementPlus)
 
