@@ -23,7 +23,7 @@
   </el-card>
 </template>
 
-<script setup>
+<script setup lang="ts">
 import bgUrl from "@/assets/images/bg/bg.png"
 import avatar from "@/assets/images/avatar/avatar.jpg"
 </script>
@@ -34,31 +34,37 @@ import avatar from "@/assets/images/avatar/avatar.jpg"
   border-radius: 15px;
   cursor: pointer;
 
-  ::v-deep .el-card__body {
+  :deep(.el-card__body) {
     padding: 0;
   }
 
-  ::v-deep .el-card__footer {
+  :deep(.el-card__footer) {
     border: none;
     width: 100%;
   }
+
   .tag {
     justify-content: space-between;
     margin: 10px 0;
+
     .mx-1 {
       flex: 2;
+
       &:last-child {
         text-align: right;
         flex: 1
       }
     }
   }
+
   .user {
     justify-content: space-between;
+
     .name {
       margin-left: 10px;
     }
   }
+
   .xin:hover {
     background: white !important;
     color: red;

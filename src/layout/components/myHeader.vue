@@ -7,7 +7,7 @@
         :fetch-suggestions="querySearch" :trigger-on-focus="true" fit-input-width select-when-unmatched>
         <template #suffix>
           <el-icon class="el-input__icon" size="20" @click="handleSearch">
-            <search></search>
+            <Search />
           </el-icon>
         </template>
         <template #default="{ item }">
@@ -19,12 +19,12 @@
   </div>
 </template>
 
-<script setup>
+<script setup lang="ts">
 let value = ref("")
-function handleSearch(params) {
-  console.log(value.value);
+function handleSearch(params: Record<string, any>) {
+  console.log(params);
 }
-function querySearch(params, cb) {
+function querySearch(params: string, cb: Function) {
   cb(
     [{ value: "a" }, { value: "b" }]
   )
@@ -38,6 +38,7 @@ function querySearch(params, cb) {
   justify-content: space-between;
   align-items: center;
   margin-bottom: 20px;
+
   .logo {
     width: 200px;
     height: 72px;
@@ -46,14 +47,16 @@ function querySearch(params, cb) {
 
   .search {
     width: 500px;
+
     .el-input__icon:hover {
       cursor: pointer;
     }
-    ::v-deep .el-input__wrapper {
+
+    :deep(.el-input__wrapper) {
       border-radius: 999px;
     }
 
-    ::v-deep .el-input__inner {
+    :deep(.el-input__inner) {
       height: 40px;
       padding: 0 5px;
     }

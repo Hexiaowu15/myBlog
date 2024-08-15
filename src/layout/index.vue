@@ -28,7 +28,7 @@
   </div>
 </template>
 
-<script setup>
+<script setup lang="ts">
 import myHeader from './components/myHeader.vue'
 import myNav from './components/myNav.vue'
 import myAside from './components/myAside.vue'
