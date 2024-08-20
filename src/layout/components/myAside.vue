@@ -26,7 +26,7 @@
             <bIcon icon-name="qq" size="18"></bIcon>
           </el-button>
           <el-button class="button_hover" color="rgba(255,255,255,.1)" circle>
-            <bIcon icon-name="wx" size="18" ></bIcon>
+            <bIcon icon-name="wx" size="18"></bIcon>
           </el-button>
         </div>
       </div>
@@ -51,7 +51,7 @@
   </div>
 </template>
 
-<script setup>
+<script setup lang="ts">
 
 </script>
 
@@ -61,7 +61,7 @@
   border-radius: 15px;
   border: none;
 
-  ::v-deep .el-card__body {
+  :deep(.el-card__body) {
     @extend .flex-col;
     padding: 20px 0 10px;
   }
@@ -96,7 +96,7 @@
     margin-top: 10px;
     justify-content: space-between;
 
-    ::v-deep .el-link__inner {
+    :deep(.el-link__inner) {
       @extend .flex-col;
     }
 
@@ -117,6 +117,7 @@
       }
     }
   }
+
   .btn {
     width: 100%;
     margin-top: 10px;

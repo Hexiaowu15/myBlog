@@ -8,8 +8,9 @@
   </el-icon>
 </template>
 
-<script setup>
+<script setup lang="ts">
 import "https://at.alicdn.com/t/c/font_3512139_fp420dohcgm.js"
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
 const props = defineProps({
   iconName: {
     type: String,

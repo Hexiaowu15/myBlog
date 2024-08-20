@@ -1,5 +1,5 @@
 <template>
-  <ElCard class="card" shadow="never">
+  <el-card class="card" shadow="never">
     <el-menu default-active="1" class="el-menu-vertical-demo" :collapse="isCollapse" @open="handleOpen"
       @close="handleClose">
       <el-menu-item index="1">
@@ -16,7 +16,7 @@
       </el-menu-item>
     </el-menu>
     <el-button class="logBtn" size='large' color="rgb(72, 96, 239)" @click="loginDialog = true">登录</el-button>
-  </ElCard>
+  </el-card>
   <el-dialog v-model="loginDialog" width="50%" align-center>
     <span>Open the dialog from the center from the screen</span>
     <template #footer>
@@ -30,17 +30,16 @@
   </el-dialog>
 </template>
 
-<script setup>
-import { ElCard } from 'element-plus';
+<script setup lang="ts">
 
 const {proxy} = getCurrentInstance()
 // 左侧导航栏是否折叠
 let isCollapse = ref(false)
 
-const handleOpen = (key, keyPath) => {
+const handleOpen = (key:string, keyPath:string[]) => {
   console.log(key, keyPath)
 }
-const handleClose = (key, keyPath) => {
+const handleClose = (key:string, keyPath:string[]) => {
   console.log(key, keyPath)
 }
 
@@ -76,14 +75,14 @@ let loginDialog = ref(false)
   font-size: 16px;
 }
 
-::v-deep .el-menu-item {
+:deep(.el-menu-item) {
   margin: 10px 0px;
   height: 48px;
   border-radius: 999px;
 }
 
-::v-deep .is-active,
-::v-deep .el-menu-item:hover {
+:deep(.is-active),
+:deep(.el-menu-item:hover) {
   background: rgb(247, 247, 247);
 }
 </style>
