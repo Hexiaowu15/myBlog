@@ -15,14 +15,14 @@
         <template #title>通知</template>
       </el-menu-item>
     </el-menu>
-    <el-button class="logBtn" size='large' color="rgb(72, 96, 239)" @click="loginDialog=true">登录</el-button>
+    <el-button class="logBtn" size='large' color="rgb(72, 96, 239)" @click="loginDialog = true">登录</el-button>
   </ElCard>
-  <el-dialog v-model="loginDialog"  width="50%" align-center>
+  <el-dialog v-model="loginDialog" width="50%" align-center>
     <span>Open the dialog from the center from the screen</span>
     <template #footer>
       <div class="dialog-footer">
         <el-button @click="loginDialog = false">Cancel</el-button>
-        <el-button type="primary" @click="loginDialog = false">
+        <el-button type="primary" @click="onLogin">
           Confirm
         </el-button>
       </div>
@@ -33,6 +33,7 @@
 <script setup>
 import { ElCard } from 'element-plus';
 
+const {proxy} = getCurrentInstance()
 // 左侧导航栏是否折叠
 let isCollapse = ref(false)
 
@@ -42,6 +43,14 @@ const handleOpen = (key, keyPath) => {
 const handleClose = (key, keyPath) => {
   console.log(key, keyPath)
 }
+
+const onLogin = () => {
+  // console.log(proxy.$request);
+  proxy.$request.post('/coffees', { name: 'xiaoyang', type: 'latte' }).then(res => {
+    console.log(res)
+  })
+}
+
 // 登录弹窗
 let loginDialog = ref(false)
 </script>
@@ -51,6 +60,7 @@ let loginDialog = ref(false)
   // margin-top: 20px;
   border-radius: 15px;
   border: none;
+
   .logBtn {
     width: 100%;
     border-radius: 999px;
