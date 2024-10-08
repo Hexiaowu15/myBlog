@@ -9,7 +9,7 @@ export default defineConfig({
   plugins: [
     vue(),
     AutoImport({
-      imports:['vue','vue-router']
+      imports: ['vue', 'vue-router']
     })
   ],
   css: {
@@ -26,7 +26,7 @@ export default defineConfig({
     }
   },
   server: {
-    port: 3000,
+    port: 5584,
     open: true,
     // proxy: {
     //   '/api': {
