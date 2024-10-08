@@ -9,12 +9,14 @@ export default defineConfig({
   plugins: [
     vue(),
     AutoImport({
-      imports: ['vue', 'vue-router']
+      imports:['vue','vue-router'],
+      dts:'src/types/auto-imports.d.ts'
     })
   ],
   css: {
     preprocessorOptions: {
       scss: {
+        api:"modern-compiler",
         additionalData: '@import "@/styles/variables.scss";',
         javascriptEnabled: true
       }
@@ -28,12 +30,12 @@ export default defineConfig({
   server: {
     port: 5584,
     open: true,
-    // proxy: {
-    //   '/api': {
-    //     target: 'http://localhost:8080',
-    //     changeOrigin: true,
-    //     rewrite: (path) => path.replace(/^\/api/, '')
-    //   }
-    // }  
+    proxy: {
+      '/api': {
+        target: 'http://localhost:3000',
+        changeOrigin: true,
+        rewrite: (path) => path.replace(/^\/api/, '')
+      }
+    }  
   }
 })

@@ -1,48 +1,28 @@
 <template>
   <el-card class="card" shadow="never">
-    <el-menu default-active="1" class="el-menu-vertical-demo" :collapse="isCollapse" @open="handleOpen"
-      @close="handleClose">
-      <el-menu-item index="1">
+    <el-menu :router="true" default-active="/" class="el-menu-vertical-demo" :collapse="isCollapse">
+      <el-menu-item index="/" >
         <bIcon icon-name="home"></bIcon>
         <template #title>首页</template>
       </el-menu-item>
-      <el-menu-item index="2">
+      <el-menu-item index="publish" >
         <bIcon icon-name="add"></bIcon>
         <template #title>发布</template>
       </el-menu-item>
-      <el-menu-item index="3">
+      <el-menu-item index="message">
         <bIcon icon-name="message"></bIcon>
         <template #title>通知</template>
       </el-menu-item>
     </el-menu>
-    <el-button class="logBtn" size='large' color="rgb(72, 96, 239)" @click="loginDialog = true">登录</el-button>
+    <el-button v-if="!getToken()" v-login="() => { }" class="logBtn" size='large'
+      color="rgb(72, 96, 239)">登录</el-button>
   </el-card>
-  <el-dialog v-model="loginDialog" width="50%" align-center>
-    <span>Open the dialog from the center from the screen</span>
-    <template #footer>
-      <div class="dialog-footer">
-        <el-button @click="loginDialog = false">Cancel</el-button>
-        <el-button type="primary" @click="loginDialog = false">
-          Confirm
-        </el-button>
-      </div>
-    </template>
-  </el-dialog>
 </template>
 
 <script setup lang="ts">
-
+import { getToken } from '@/utils/token';
 // 左侧导航栏是否折叠
 let isCollapse = ref(false)
-
-const handleOpen = (key:string, keyPath:string[]) => {
-  console.log(key, keyPath)
-}
-const handleClose = (key:string, keyPath:string[]) => {
-  console.log(key, keyPath)
-}
-// 登录弹窗
-let loginDialog = ref(false)
 </script>
 
 <style lang="scss" scoped>

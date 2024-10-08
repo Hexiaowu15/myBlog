@@ -1,9 +1,13 @@
 <script setup lang="ts">
+import { useLoginDialogStore } from "@/stores/modules/loginDialog"
 
+const login = useLoginDialogStore()
+const dialogVisible = toRef(login, "visible")
 </script>
 
 <template>
   <RouterView />
+  <loginDialog v-model="dialogVisible"></loginDialog>
 </template>
 
 <style scoped>
