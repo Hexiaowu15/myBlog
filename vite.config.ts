@@ -9,12 +9,14 @@ export default defineConfig({
   plugins: [
     vue(),
     AutoImport({
-      imports:['vue','vue-router']
+      imports:['vue','vue-router'],
+      dts:'src/types/auto-imports.d.ts'
     })
   ],
   css: {
     preprocessorOptions: {
       scss: {
+        api:"modern-compiler",
         additionalData: '@import "@/styles/variables.scss";',
         javascriptEnabled: true
       }

@@ -1,10 +1,10 @@
 
 import './styles/style.css'
 import 'element-plus/dist/index.css'
-import request from './utils/request'
 
 import { createApp } from 'vue'
-import { createPinia } from 'pinia'
+import pinia from '@/stores/index'
+import directives from  '@/directive/index'
 
 import App from './App.vue'
 import router from './router'
@@ -15,16 +15,13 @@ import blogIcon from './components/blogIcon/index.vue'
 import loginDialog from './components/loginDialog/index.vue'
 const app = createApp(App)
 
-app.config.globalProperties.$request = request
+// 遍历 ElementPlusIconsVue 中的所有图标组件并注册到应用中
 for(const [key,compoent] of Object.entries(ElementPlusIconsVue)){
   app.component(key,compoent)
 }
-
-app.use(createPinia())
-app.use(router)
-app.use(elementPlus)
-
 app.component('bIcon', blogIcon)
 app.component('loginDialog', loginDialog)
 
-app.mount('#app')
+
+// 注册全局指令
+app.use(router).use(directives).use(elementPlus).use(pinia).mount('#app')

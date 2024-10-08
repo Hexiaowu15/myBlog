@@ -1,4 +1,4 @@
-$color:red;
+$color:rgb(72, 96, 239);
 
 .flex {
   display: flex;
@@ -12,4 +12,19 @@ $color:red;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+}
+
+@mixin scrollBar {
+  &::-webkit-scrollbar-track-piece {
+    background: #f1f1f1;
+  }
+
+  &::-webkit-scrollbar {
+    width: 6px;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background: $color;
+    border-radius: 20px;
+  }
 }

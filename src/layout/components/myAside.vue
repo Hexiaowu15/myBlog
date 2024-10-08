@@ -31,8 +31,8 @@
         </div>
       </div>
       <div class="btn">
-        <el-button style="width:100%;" type="primary" color="rgb(238,182,74)">
-          <el-text class="text" size="large">去往主页</el-text>
+        <el-button v-login="getUserList" style="width:100%; color: #fff;" type="primary" color="rgb(238,182,74)">
+          去往主页
         </el-button>
       </div>
     </el-card>
@@ -52,7 +52,14 @@
 </template>
 
 <script setup lang="ts">
-
+import { getUsers } from '@/api';
+const getUserList = () => {
+  getUsers().then((res) => {    
+    console.log(res);
+  }).catch((err) => {
+    console.log(err);
+  })
+}
 </script>
 
 <style lang="scss" scoped>
