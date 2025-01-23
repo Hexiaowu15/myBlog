@@ -22,12 +22,13 @@ jobs:
 
       - name: 设置 pnpm
         uses: pnpm/action-setup@v4
-
+        with:
+          version: 9.15.4 # 或者使用最新版本
 
       - name: 设置 Node.js
         uses: actions/setup-node@v4
         with:
-          node-version: 22
+          node-version: 18.20.5
           cache: pnpm
 
       - name: 安装依赖
