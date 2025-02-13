@@ -1,6 +1,6 @@
 ---
-text: JS111
-title: Js面试题1
+text: vue111
+title: vue面试题1
 icon: circle-info
 lastUpdated: false
 prev: false
@@ -8,6 +8,6 @@ next: false
 # article: false
 ---
 
-## JS面试题123
+## vue面试题123
 
 

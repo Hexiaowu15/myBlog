@@ -20,22 +20,22 @@ export const zhNavbar = navbar([
       {
         icon: "skill-icons:javascript",
         text: "JS面试题",
-        link:"/questions/jsNotes/"
+        link:"jsNotes/"
       },
       {
         icon: "skill-icons:vuejs-light",
         text: "Vue面试题",
-        link:"/vueNotes/"
+        link:"vueNotes/"
       },
       {
         icon: "skill-icons:html",
         text: "Html面试题",
-        link:"/htmlNotes/"
+        link:"htmlNotes/"
       },
       {
         icon: "skill-icons:css",
         text: "CSS面试题",
-        link:"/cssNotes/"
+        link:"cssNotes/"
       }
     ],
   },

@@ -1,6 +1,6 @@
 ---
-text: JS111
-title: Js面试题1
+text: html111
+title: html面试题1
 icon: circle-info
 lastUpdated: false
 prev: false
@@ -8,6 +8,6 @@ next: false
 # article: false
 ---
 
-## JS面试题123
+## html面试题123
 
 
