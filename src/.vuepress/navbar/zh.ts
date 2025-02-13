@@ -3,58 +3,61 @@ import { navbar } from "vuepress-theme-hope";
 export const zhNavbar = navbar([
   {
     text: "首页",
-    icon: "house",
+    icon: "noto-v1:house",
     link: "/",
+    // prefix: "/posts/",
   },
   {
-    text: "文档",
-    icon: "creative",
-    link: "/demo/",
+    text: "笔记",
+    icon: "twemoji:closed-book",
+    link: "/notes/",
   },
   {
-    text: "博文",
-    icon: "pen-to-square",
-    prefix: "/posts/",
+    text: "面试题",
+    icon: "emojione:clipboard",
+    prefix: "/questions/",
     children: [
       {
-        text: "苹果",
-        icon: "pen-to-square",
-        prefix: "apple/",
-        children: [
-          { text: "苹果1", icon: "pen-to-square", link: "1" },
-          { text: "苹果2", icon: "pen-to-square", link: "2" },
-          "3",
-          "4",
-        ],
+        icon: "skill-icons:javascript",
+        text: "JS面试题",
+        link:"/questions/jsNotes/"
       },
       {
-        text: "香蕉",
-        icon: "pen-to-square",
-        prefix: "banana/",
-        children: [
-          {
-            text: "香蕉 1",
-            icon: "pen-to-square",
-            link: "1",
-          },
-          {
-            text: "香蕉 2",
-            icon: "pen-to-square",
-            link: "2",
-          },
-          "3",
-          "4",
-        ],
+        icon: "skill-icons:vuejs-light",
+        text: "Vue面试题",
+        link:"/vueNotes/"
       },
-      { text: "樱桃", icon: "pen-to-square", link: "cherry" },
-      { text: "火龙果", icon: "pen-to-square", link: "dragonfruit" },
-      "tomato",
-      "strawberry",
+      {
+        icon: "skill-icons:html",
+        text: "Html面试题",
+        link:"/htmlNotes/"
+      },
+      {
+        icon: "skill-icons:css",
+        text: "CSS面试题",
+        link:"/cssNotes/"
+      }
     ],
   },
   {
-    text: "V2 文档",
-    icon: "book",
-    link: "https://theme-hope.vuejs.press/zh/",
+    text: "说说",
+    icon: "noto-v1:star",
+    link: "/space/",
+  },
+  {
+    text: "留言板",
+    icon: "fluent-color:mail-24",
+    link: "/message/",
+  },
+  
+  {
+    text: "友链",
+    icon: "unjs:ufo",
+    link: "/friends/",
+  },
+  {
+    text: "关于",
+    icon: "emojione-v1:boy",
+    link: "/intro",
   },
 ]);

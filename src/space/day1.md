@@ -1,4 +1,5 @@
 ---
+type: space
 # 这是文章的标题
 title: 页面配置
 # 你可以自定义封面图片
@@ -26,6 +27,7 @@ star: true
 footer: 这是测试显示的页脚
 # 你可以自定义版权信息
 copyright: 无版权
+sidebar: false
 ---
 
 `more` 注释之前的内容被视为文章摘要。
@@ -123,3 +125,7 @@ const MyComponent = defineComponent({
   link: https://mister-hope.com
   background: rgba(253, 230, 138, 0.15)
   ```
+
+<script setup lang="ts">
+  
+</script>

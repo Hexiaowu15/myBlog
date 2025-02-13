@@ -1,14 +1,13 @@
 import { hopeTheme } from "vuepress-theme-hope";
 
-import { enNavbar, zhNavbar } from "./navbar/index.js";
-import { enSidebar, zhSidebar } from "./sidebar/index.js";
-
+import { zhNavbar } from "./navbar/index.js";
+import { zhSidebar } from "./sidebar/index.js";
 export default hopeTheme({
   hostname: "https://xiaoayng.xiaowu15.top",
   license: "MIT",
   author: {
     name: "xiaoWu",
-    url: "https://xiaowu15.top",
+    url: "https://xiaoyang.xiaowu15.top",
     email: "xiaowu@xiaowu15.top",
   },
   darkmode: "toggle",
@@ -31,23 +30,23 @@ export default hopeTheme({
       displayFooter: true,
 
       blog: {
-        intro: "/intro.html",
+        intro: "/intro",
         avatar: "/assets/images/avatar.jpg",
         name: "小武",
         description: "生活不止眼前的苟且，还有诗和远方。",
         medias: {
           // Baidu: "https://example.com",
-          BiliBili: "https://example.com",
+          // BiliBili: "https://example.com",
           // Bitbucket: "https://example.com",
           // Dingding: "https://example.com",
           // Discord: "https://example.com",
           // Dribbble: "https://example.com",
-          Email: "mailto:info@example.com",
+          Email: "mailto:xiaowu@xiaowu15.top",
           // Evernote: "https://example.com",
           // Facebook: "https://example.com",
           // Flipboard: "https://example.com",
-          Gitee: "https://example.com",
-          GitHub: "https://example.com",
+          Gitee: "https://gitee.com/xiaowu15",
+          GitHub: "https://github.com/Hexiaowu15",
           // Gitlab: "https://example.com",
           // Gmail: "mailto:info@example.com",
           // Instagram: "https://example.com",
@@ -56,7 +55,7 @@ export default hopeTheme({
           // Linkedin: "https://example.com",
           // Pinterest: "https://example.com",
           // Pocket: "https://example.com",
-          QQ: "https://example.com",
+          // QQ: "https://example.com",
           // Qzone: "https://example.com",
           // Reddit: "https://example.com",
           // Rss: "https://example.com",
@@ -82,75 +81,10 @@ export default hopeTheme({
     /**
      * Chinese locale config
      */
-    "/en/": {
-      // navbar
-      navbar: enNavbar,
-
-      // sidebar
-      sidebar: enSidebar,
-
-      footer: "Default footer",
-
-      displayFooter: true,
-
-      blog: {
-        intro: "/intro.html",
-        avatar: "/assets/images/avatar.jpg",
-        name: "xiaoWu",
-        description:
-          "Life is not only what is before us, there is also poetry and the distant land.",
-        medias: {
-          // Baidu: "https://example.com",
-          BiliBili: "https://example.com",
-          // Bitbucket: "https://example.com",
-          // Dingding: "https://example.com",
-          // Discord: "https://example.com",
-          // Dribbble: "https://example.com",
-          Email: "mailto:info@example.com",
-          // Evernote: "https://example.com",
-          // Facebook: "https://example.com",
-          // Flipboard: "https://example.com",
-          Gitee: "https://example.com",
-          GitHub: "https://example.com",
-          // Gitlab: "https://example.com",
-          // Gmail: "mailto:info@example.com",
-          // Instagram: "https://example.com",
-          // Lark: "https://example.com",
-          // Lines: "https://example.com",
-          // Linkedin: "https://example.com",
-          // Pinterest: "https://example.com",
-          // Pocket: "https://example.com",
-          QQ: "https://example.com",
-          // Qzone: "https://example.com",
-          // Reddit: "https://example.com",
-          // Rss: "https://example.com",
-          // Steam: "https://example.com",
-          // Twitter: "https://example.com",
-          Wechat: "https://example.com",
-          // Weibo: "https://example.com",
-          // Whatsapp: "https://example.com",
-          // Youtube: "https://example.com",
-          // Zhihu: "https://example.com",
-          // VuePressThemeHope: {
-          //   icon: "https://theme-hope-assets.vuejs.press/logo.svg",
-          //   link: "https://theme-hope.vuejs.press",
-          // },
-        },
-      },
-
-      // page meta
-      metaLocales: {
-        editLink: "Edit this page on GitHub",
-      },
-    },
   },
 
   encrypt: {
     config: {
-      "/en/demo/encrypt.html": {
-        hint: "Password: 1234",
-        password: "1234",
-      },
       "/demo/encrypt.html": {
         hint: "Password: 1234",
         password: "1234",
@@ -232,7 +166,25 @@ export default hopeTheme({
   },
 
   plugins: {
-    blog: true,
+    blog: {
+      // filter: (page) => page.path.startsWith("/notes/") || page.path.startsWith("/space/"),
+      type: [
+        {
+          key: "space",
+          filter: (page) => page.frontmatter.type === "space",
+          frontmatter: (page) => ({title: "说说",})
+        },
+        {
+          key: "notes",
+          filter: (page) => page.frontmatter.type === "note",
+          frontmatter: (page) => ({title: "笔记",})
+        },
+        // {
+        //   key: "/",
+        //   filter: (page) => ["space", "note"].includes(page.frontmatter.type +''),
+        // }
+      ],
+    },
 
     // Install @waline/client before enabling it
     // Note: This is for testing ONLY!
@@ -307,4 +259,5 @@ export default hopeTheme({
     //   },
     // },
   },
-});
+},
+{ custom: true },);
