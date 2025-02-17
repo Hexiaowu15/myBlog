@@ -5,7 +5,9 @@ icon: circle-info
 lastUpdated: false
 prev: false
 next: false
-# article: false
+article: false
+breadcrumb: false
+comment: true
 ---
 
 ## JS面试题第二天
