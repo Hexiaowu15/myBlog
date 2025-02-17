@@ -1,7 +1,7 @@
 ---
 layout: Message
+article: false
 ---
 
-# Message
 
 
