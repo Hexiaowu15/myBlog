@@ -1,8 +1,11 @@
-import { defineClientConfig } from 'vuepress/client'
-// import Page from './components/Page.vue'
+import { defineClientConfig } from "vuepress/client";
+import Message from "./layouts/message.vue";
 
 export default defineClientConfig({
+  enhance({ app, router, siteData }) {},
+  setup() {},
   layouts: {
-    // Page,
+    Message,
   },
-})
+  rootComponents: [],
+});
