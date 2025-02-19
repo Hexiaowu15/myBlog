@@ -21,12 +21,7 @@ tag:
 sticky: true
 # 此页面会出现在星标文章中
 star: true
-sidebar: false
-lastUpdated: true
-prev: true
-next: true
 breadcrumb: false
-comment: true
 
 ---
 

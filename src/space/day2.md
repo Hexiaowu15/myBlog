@@ -21,7 +21,6 @@ tag:
 sticky: false
 # 此页面会出现在星标文章中
 star: false
-sidebar: false
 lastUpdated: true
 prev: true
 next: true
