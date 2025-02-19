@@ -1,7 +1,7 @@
 ---
 type: space
 # 这是文章的标题
-title: 页面配置
+title: 页面配置2
 # 你可以自定义封面图片
 # cover: /assets/images/cover1.jpg
 # 这是页面的图标
@@ -18,9 +18,9 @@ tag:
   - 页面配置
   - 使用指南
 # 此页面会在文章列表置顶
-sticky: true
+sticky: false
 # 此页面会出现在星标文章中
-star: true
+star: false
 sidebar: false
 lastUpdated: true
 prev: true
@@ -125,7 +125,3 @@ const MyComponent = defineComponent({
   link: https://mister-hope.com
   background: rgba(253, 230, 138, 0.15)
   ```
-
-<script setup lang="ts">
-  
-</script>
