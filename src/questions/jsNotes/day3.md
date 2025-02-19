@@ -1,6 +1,6 @@
 ---
-text: JS111
-title: Js面试题1
+text: JS23
+title: Js面试题第三天
 icon: circle-info
 lastUpdated: true
 prev: true
@@ -9,7 +9,6 @@ article: false
 breadcrumb: false
 comment: true
 ---
-
-## JS面试题123
+## JS面试题第三天
 
 

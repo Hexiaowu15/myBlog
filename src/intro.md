@@ -7,8 +7,8 @@ article: false
 breadcrumb: false
 # pageInfo: false
 contributors: false
-editLink: false
-lastUpdated: false
+editLink: true
+lastUpdated: true
 prev: false
 next: false
 comment: false
