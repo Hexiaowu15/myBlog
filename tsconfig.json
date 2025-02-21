@@ -11,7 +11,8 @@
   },
   "include": [
     "src/.vuepress/**/*.ts",
-    "src/.vuepress/**/*.vue"
+    "src/.vuepress/**/*.vue",
+    "src/types/**/*"
   ],
   "exclude": [
     "node_modules"

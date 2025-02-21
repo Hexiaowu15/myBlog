@@ -11,11 +11,17 @@
     "update-package": "pnpm dlx vp-update"
   },
   "devDependencies": {
+    "@unocss/vite": "65.5.0",
     "@vuepress/bundler-vite": "2.0.0-rc.19",
     "@vuepress/plugin-search": "2.0.0-rc.78",
     "sass-embedded": "^1.85.0",
+    "unocss": "65.5.0",
     "vue": "^3.5.13",
     "vuepress": "2.0.0-rc.19",
     "vuepress-theme-hope": "2.0.0-rc.71"
+  },
+  "dependencies": {
+    "@splinetool/runtime": "0.9.369",
+    "lodash-es": "4.17.21"
   }
 }

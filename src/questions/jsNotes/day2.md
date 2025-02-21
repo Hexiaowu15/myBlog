@@ -2,6 +2,7 @@
 text: JS23
 title: Js面试题第二天
 icon: circle-info
+date: 2025-02-20
 lastUpdated: true
 prev: true
 next: true

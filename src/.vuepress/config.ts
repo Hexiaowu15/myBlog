@@ -1,11 +1,13 @@
 import { defineUserConfig } from "vuepress";
-// import { getDirname, path } from "vuepress/utils";
+import { getDirname, path } from "vuepress/utils";
+import {viteBundler} from "@vuepress/bundler-vite"
 
-// const __dirname = getDirname(import.meta.url);
+const __dirname = getDirname(import.meta.url);
+import viteOptions from './configs/vite.config'
+const InfoPanel = path.resolve(__dirname, "./components/InfoPanel/index.vue");
+
 import theme from "./theme.js";
-
 export default defineUserConfig({
-  
   base: "/",
   locales: {
     "/": {
@@ -18,12 +20,16 @@ export default defineUserConfig({
 
   // Enable it with pwa
   // shouldPrefetch: false,
-  // alias: {
-  //   // 你可以在这里将别名定向到自己的组件
-  //   // 比如这里我们将主题的主页组件改为用户 .vuepress/components 下的 HomePage.vue
-  //   "@theme-hope/components/NormalPage": path.resolve(
-  //     __dirname,
-  //     "./components/NormalPage.vue",
-  //   ),
-  // },
+  alias: {
+    // 你可以在这里将别名定向到自己的组件
+    // 比如这里我们将主题的主页组件改为用户 .vuepress/components 下的 HomePage.vue
+    "@theme-hope": path.resolve(
+      __dirname,
+      "../../node_modules/vuepress-theme-hope/lib/client"
+    ),
+    "@theme-hope/modules/blog/components/InfoPanel": InfoPanel,
+  },
+  bundler:viteBundler({
+    viteOptions
+  })
 });
