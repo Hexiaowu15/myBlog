@@ -8,25 +8,25 @@ export interface Link {
 export const fixedLinks: Link[] = [
   {
     name: "Vue",
-    icon: "https://api.liubing.me/favicon/vuejs.org.png",
+    icon: "/assets/icons/vue.png",
     link: "https://cn.vuejs.org/", 
     desc: "渐进式 JavaScript 框架"
   },
   {
     name: "VuePress",
-    icon: "https://api.liubing.me/favicon/vuepress.vuejs.org.png",
+    icon: "/assets/icons/vuepress.png",
     link: "https://vuepress.vuejs.org/zh/",
     desc: "Vue 驱动的静态网站生成器。"
   },
   {
     name: "VuePress Theme Hope",
-    icon: "https://api.liubing.me/favicon/theme-hope.vuejs.press.png",
+    icon: "/assets/icons/theme-hope.png",
     link: "https://theme-hope.vuejs.press/zh/",
     desc: "一个具有强大功能的 vuepress 主题✨"
   },
   {
     name: "iconfont",
-    icon: "https://api.liubing.me/favicon/iconfont.cn.png",
+    icon: "/assets/icons/iconfont.png",
     link: "https://www.iconfont.cn/",
     desc: "阿里巴巴矢量图标库。"
   }

@@ -35,13 +35,13 @@ export default hopeTheme(
       <div>
         <span>Powered By</span>
         <a href="https://vuepress.vuejs.org" target="_blank" rel="noopener noreferrer">
-          <img src="https://api.liubing.me/favicon/vuepress.vuejs.org.png"><b>VuePress</b>
+          <img src="/assets/icons/vuepress.png"><b>VuePress</b>
         </a>
       </div>
       <div>
         <span>Theme By</span>
         <a href="https://theme-hope.vuejs.press/zh/" target="_blank" rel="noopener noreferrer">
-          <img src="https://api.liubing.me/favicon/theme-hope.vuejs.press.png"><b>VuePress Theme Hope</b>
+          <img src="/assets/icons/theme-hope.png"><b>VuePress Theme Hope</b>
         </a>
       </div>
       <div>
