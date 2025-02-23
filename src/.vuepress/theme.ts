@@ -3,7 +3,7 @@ import { hopeTheme } from "vuepress-theme-hope";
 import { zhNavbar } from "./navbar/index.js";
 import { zhSidebar } from "./sidebar/index.js";
 
-const year = new Date().getFullYear()
+const year = new Date().getFullYear();
 
 export default hopeTheme(
   {
@@ -30,7 +30,7 @@ export default hopeTheme(
         sidebar: zhSidebar,
 
         // 自定义页脚
-    footer: `
+        footer: `
     <div>
       <div>
         <span>Powered By</span>
@@ -216,7 +216,11 @@ export default hopeTheme(
         categoryId: "DIC_kwDON75JgM4CnGFN",
       },
       blog: {
-        // filter: (page) => page.path.startsWith("/notes/") || page.path.startsWith("/space/"),
+        filter: (page) => {
+          const validPrefixes = ["/notes/", "/space/", "/questions/"];
+          return validPrefixes.some((prefix) => page.path.startsWith(prefix));
+        },
+
         type: [
           {
             key: "space",
