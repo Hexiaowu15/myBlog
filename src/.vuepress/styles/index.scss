@@ -181,3 +181,16 @@ hr {
     transform: rotate(360deg);
   }
 }
+
+
+.vp-blog-hero-image,
+.vp-blogger-avatar {
+  border-radius: 50%;
+}
+.vp-blog-hero-image:hover{
+  animation: spin 1s linear infinite;
+}
+
+.vp-blogger-avatar{
+  animation: spin 3s linear infinite;
+}

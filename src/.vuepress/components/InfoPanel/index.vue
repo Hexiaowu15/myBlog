@@ -1,17 +1,12 @@
 <template>
   <aside class="vp-blog-info-wrapper">
     <div class="vp-blogger-info-inner">
-      <BingLogo />
       <BloggerInfo />
     </div>
 
     <div class="vp-blogger-info">
       <Heatmap />
     </div>
-
-    <!-- <div class="vp-blogger-info blog-clock-box">
-      <BlogClock />
-    </div> -->
 
     <InfoList />
   </aside>

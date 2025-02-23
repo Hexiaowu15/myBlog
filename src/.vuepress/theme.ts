@@ -2,6 +2,9 @@ import { hopeTheme } from "vuepress-theme-hope";
 
 import { zhNavbar } from "./navbar/index.js";
 import { zhSidebar } from "./sidebar/index.js";
+
+const year = new Date().getFullYear()
+
 export default hopeTheme(
   {
     hostname: "https://xiaoayng.xiaowu15.top",
@@ -26,7 +29,31 @@ export default hopeTheme(
         // sidebar
         sidebar: zhSidebar,
 
-        footer: "默认页脚",
+        // 自定义页脚
+    footer: `
+    <div>
+      <div>
+        <span>Powered By</span>
+        <a href="https://vuepress.vuejs.org" target="_blank" rel="noopener noreferrer">
+          <img src="https://api.liubing.me/favicon/vuepress.vuejs.org.png"><b>VuePress</b>
+        </a>
+      </div>
+      <div>
+        <span>Theme By</span>
+        <a href="https://theme-hope.vuejs.press/zh/" target="_blank" rel="noopener noreferrer">
+          <img src="https://api.liubing.me/favicon/theme-hope.vuejs.press.png"><b>VuePress Theme Hope</b>
+        </a>
+      </div>
+      <div>
+        版权所有 © ${year} <a href="https://xiaoyang.xiaowu15.top"><b>xiaoWu</b></a> | 
+        <a href="/about/site.html">关于本站</a>
+      </div>
+      <div>
+        <span>本博客已运行</span>
+        <span id="running-time"></span>
+      </div>
+    </div>
+  `,
 
         displayFooter: true,
 

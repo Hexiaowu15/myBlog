@@ -1,11 +1,10 @@
 import { defineUserConfig } from "vuepress";
 import { getDirname, path } from "vuepress/utils";
 import {viteBundler} from "@vuepress/bundler-vite"
-
 const __dirname = getDirname(import.meta.url);
 import viteOptions from './configs/vite.config'
 const InfoPanel = path.resolve(__dirname, "./components/InfoPanel/index.vue");
-
+const PageFooter = path.resolve(__dirname, './components/PageFooter/index.vue')
 import theme from "./theme.js";
 export default defineUserConfig({
   base: "/",
@@ -28,6 +27,7 @@ export default defineUserConfig({
       "../../node_modules/vuepress-theme-hope/lib/client"
     ),
     "@theme-hope/modules/blog/components/InfoPanel": InfoPanel,
+    '@theme-hope/components/PageFooter': PageFooter,
   },
   bundler:viteBundler({
     viteOptions

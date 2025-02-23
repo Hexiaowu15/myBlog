@@ -1,4 +1,0 @@
----
-layout: Message
-article: false
----

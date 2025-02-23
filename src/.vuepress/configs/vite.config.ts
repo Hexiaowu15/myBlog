@@ -1,10 +1,7 @@
 import type { InlineConfig, PluginOption } from 'vite'
 
-import unocss from '@unocss/vite'
-
 
 const vitePlugins: PluginOption[] = [
-  unocss(),
 ]
 
 const viteOptions = {

@@ -45,12 +45,6 @@ export const zhNavbar = navbar([
     link: "/space/",
   },
   {
-    text: "留言板",
-    icon: "fluent-color:mail-24",
-    link: "/message/",
-  },
-  
-  {
     text: "友链",
     icon: "unjs:ufo",
     link: "/friends/",
