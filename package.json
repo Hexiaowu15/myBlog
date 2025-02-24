@@ -11,7 +11,6 @@
     "update-package": "pnpm dlx vp-update"
   },
   "devDependencies": {
-    "@unocss/vite": "65.5.0",
     "@vuepress/bundler-vite": "2.0.0-rc.19",
     "@vuepress/plugin-search": "2.0.0-rc.78",
     "sass-embedded": "^1.85.0",

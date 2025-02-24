@@ -254,7 +254,19 @@ export default hopeTheme(
       icon: {
         prefix: "fa6-solid:",
       },
-      search: true,
+      search: {
+        locales: {
+          "/": {
+            placeholder: "搜索",
+          },
+        },
+        hotKeys: [{ key: "k", ctrl: true }],
+        maxSuggestions: 10,
+        isSearchable: (page) => {
+          const validPrefixes = ["/notes/", "/space/", "/questions/"];
+          return validPrefixes.some((prefix) => page.path.startsWith(prefix));
+        },
+      },
       // install @vuepress/plugin-pwa and uncomment these if you want a PWA
       // pwa: {
       //   favicon: "/favicon.ico",
