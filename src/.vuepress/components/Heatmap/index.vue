@@ -30,6 +30,7 @@ const postList = cloneDeep(articles.value)
   .map(item => item.info)
 
 const heatmaps = computed(() => {
+  if (!postList.length) return []
   const minYear = new Date(postList[0].d!).getFullYear()
   const maxYear = new Date(postList[postList.length - 1].d!).getFullYear()
   const counts: IHeatmap[] = []
