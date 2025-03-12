@@ -7,6 +7,7 @@ const year = new Date().getFullYear();
 
 export default hopeTheme(
   {
+    headerDepth:5,
     hostname: "https://xiaoayng.xiaowu15.top",
     license: "MIT",
     author: {
