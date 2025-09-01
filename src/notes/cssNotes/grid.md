@@ -1,6 +1,6 @@
 ---
 # 文章类型
-article: false
+article: note
 # 这是文章的标题
 title: CSS grid布局
 # 你可以自定义封面图片
